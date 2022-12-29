@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, {css} from 'styled-components';
 
-import {colors, type ColorsKey} from './Colors';
+import {colors, type ColorsType} from './Colors';
 import convertValueToUnit from '../helpers/convertValueToUnit';
 
 type UnitType = string | number;
@@ -48,7 +48,7 @@ type Display =
 
 type Position = 'static' | 'absolute' | 'fixed' | 'relative' | 'sticky';
 
-interface ViewProps {
+interface Props {
   children?: JSX.Element | JSX.Element[];
   className?: string;
   style?: React.CSSProperties;
@@ -84,12 +84,12 @@ interface ViewProps {
   flexAlignSelf?: AlignItems;
   flexWrap?: Wrap;
   depth?: number;
-  backgroundColor?: ColorsKey;
+  backgroundColor?: ColorsType;
   backgroundSrc?: string;
   bordered?: boolean;
   filled?: boolean;
   borderWidth?: number;
-  borderColor?: ColorsKey;
+  borderColor?: ColorsType;
   borderRadius?: number;
   verticalAlign?: VerticalAlign;
   horizontalAlign?: HorizontalAlign;
@@ -104,7 +104,7 @@ interface ViewProps {
   right?: number | string;
 }
 
-const StyledView = styled.div<ViewProps>`
+const StyledView = styled.div<Props>`
   ${(props) =>
     props.flex ||
     props.flexDirection ||
@@ -425,7 +425,7 @@ const StyledView = styled.div<ViewProps>`
       : css``};
 `;
 
-const View = (props: ViewProps) => (
+const View = (props: Props) => (
   <StyledView
     flex={props.flex}
     flexGrow={props.flexGrow}

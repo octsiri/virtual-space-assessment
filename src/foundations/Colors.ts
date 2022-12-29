@@ -47,6 +47,6 @@ export const colors = {
   darkBlue20: '#135A89',
   darkBlue10: '#16659A',
   transparent: 'transparent',
-}
+};
 
-export type ColorsKey = keyof typeof colors
+export type ColorsType = keyof typeof colors;
