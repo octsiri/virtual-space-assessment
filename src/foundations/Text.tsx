@@ -3,29 +3,13 @@ import styled, {css} from 'styled-components';
 
 import {colors, type ColorsType} from './Colors';
 
-export type FontSize =
-  | 'xmicro'
-  | 'micro'
-  | 'small'
-  | 'regular'
-  | 'large'
-  | 'extra-large'
-  | 'display-small'
-  | 'display-medium'
-  | 'display-semilarge'
-  | 'display-large';
+export type FontSize = 'xs' | 'sm' | 'md' | 'lg';
 
 export const fontSizeMap = {
-  xmicro: 10,
-  micro: 12,
-  small: 14,
-  regular: 16,
-  large: 18,
-  'extra-large': 20,
-  'display-small': 24,
-  'display-medium': 32,
-  'display-semilarge': 34,
-  'display-large': 40,
+  xs: 10,
+  sm: 14,
+  md: 18,
+  lg: 28,
 };
 
 type FontWeight = 'regular' | 'medium' | 'bold';
@@ -37,16 +21,10 @@ const fontWeightMap = {
 };
 
 export const fontLineHeight = {
-  xmicro: 14,
-  micro: 16,
-  small: 18,
-  regular: 24,
-  large: 22,
-  'extra-large': 30,
-  'display-small': 30,
-  'display-medium': 40,
-  'display-semilarge': 42,
-  'display-large': 60,
+  xs: 14,
+  sm: 18,
+  md: 24,
+  lg: 34,
 };
 
 type TextTransform = 'none' | 'capitalize' | 'uppercase' | 'lowercase';
@@ -65,7 +43,7 @@ interface Props {
 }
 const StyledText = styled.span<Props>`
   &:empty {
-    min-height: ${(props) => (props.size ? fontLineHeight[props.size] : fontLineHeight.regular)}px;
+    min-height: ${(props) => (props.size ? fontLineHeight[props.size] : fontLineHeight.md)}px;
   }
   -webkit-font-smoothing: antialiased;
   ${(props) =>
@@ -80,8 +58,8 @@ const StyledText = styled.span<Props>`
           color: ${props.color ? colors[props.color] : colors.black};
           font-family: ${props.family === 'serif' ? 'Georgia, Serif' : 'sans-serif'};
         `};
-  font-size: ${(props) => (props.size ? fontSizeMap[props.size] : fontSizeMap.regular)}px;
-  line-height: ${(props) => (props.size ? fontLineHeight[props.size] : fontLineHeight.regular)}px;
+  font-size: ${(props) => (props.size ? fontSizeMap[props.size] : fontSizeMap.md)}px;
+  line-height: ${(props) => (props.size ? fontLineHeight[props.size] : fontLineHeight.md)}px;
   font-weight: ${(props) =>
     props.fontWeight ? fontWeightMap[props.fontWeight] : fontWeightMap.regular};
   ${(props) =>

@@ -1,18 +1,54 @@
 import * as React from 'react';
-import {View, Image, Text, colors} from './foundations';
+import {View, Text} from './foundations';
+import Avatar from './components/Avatar';
+
 const App = () => (
-  <View padding={20} flex={1} backgroundColor='cyan' height={340}>
-    <Text>Test Image</Text>
-    <Image
-      alt='image'
-      height='300px'
-      width='200px'
-      background={'url("https://fileinfo.com/img/ss/xl/jpg_44.png")'}
-      objectFit='cover'
-    />
-    <Text size='large' color='blueDark'>
-      Test Image2
+  <View padding={20} height='100vh' width={'100vw'} flexAlignItems='center' flexDirection='column'>
+    <Text size='lg' color='cyanDark' fontWeight='bold'>
+      Show Case Foundation UIKIT
     </Text>
+
+    <View margin={'20px'} flexDirection='row'>
+      <Avatar
+        src='url("https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg")'
+        name='Tomi Budi'
+        size='xs'
+        defaultBackground='cyanLightest'
+        defaultColor='gray70'
+      />
+      <Avatar name='Tomi Budi' size='xs' defaultBackground='cyanLightest' defaultColor='gray70' />
+    </View>
+    <View margin={'20px'} flexDirection='row'>
+      <Avatar
+        src='url("https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg")'
+        name='Tomi Budi'
+        size='md'
+        defaultBackground='cyanLightest'
+        defaultColor='gray70'
+      />
+      <Avatar name='Tomi Budi' size='sm' defaultBackground='cyanLightest' defaultColor='gray70' />
+    </View>
+    <View margin={'20px'} flexDirection='row'>
+      <Avatar
+        src='url("https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg")'
+        name='Tomi Budi'
+        size='md'
+        defaultBackground='cyanLightest'
+        defaultColor='gray70'
+      />
+      <Avatar name='Tomi Budi' size='md' defaultBackground='cyanLightest' defaultColor='gray70' />
+    </View>
+    <View margin={'20px'} flexDirection='row'>
+      <Avatar
+        bordered
+        src='url("https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg")'
+        name='Tomi Budi'
+        size='lg'
+        defaultBackground='cyanLightest'
+        defaultColor='gray70'
+      />
+      <Avatar name='Tomi Budi' size='lg' defaultBackground='cyanLightest' defaultColor='gray70' />
+    </View>
   </View>
 );
 

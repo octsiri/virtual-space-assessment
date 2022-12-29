@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled, {css} from 'styled-components';
 
 import {colors, type ColorsType} from './Colors';
-import convertValueToUnit from '../helpers/convertValueToUnit';
+import convertValueToUnit from '../utils/convertValueToUnit';
 
 type UnitType = string | number;
 type Direction = 'row' | 'column' | 'row-reverse' | 'column-reverse';
