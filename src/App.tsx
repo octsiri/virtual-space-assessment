@@ -1,11 +1,10 @@
 import * as React from 'react';
 import {View, Text} from './foundations';
-import Avatar from './components/Avatar';
-import AvatarGroup from './components/AvatarGroup';
+import {Avatar, AvatarsGroup} from './components/Avatar';
 
 const App = () => (
   <View padding={20} height='100vh' width={'100vw'} flexAlignItems='center' flexDirection='column'>
-    <Text size='lg' color='cyanDark' fontWeight='bold'>
+    <Text size='lg' color='cyanDarkest' fontWeight='bold'>
       Show Case Foundation UIKIT
     </Text>
 
@@ -27,7 +26,7 @@ const App = () => (
         defaultBackground='cyanLightest'
         defaultColor='gray70'
       />
-      <Avatar name='Tomi Budi' size='sm' defaultBackground='cyanLightest' defaultColor='gray70' />
+      <Avatar name='Tomi Budi' size='sm' />
     </View>
     <View margin={'20px'} flexDirection='row'>
       <Avatar
@@ -50,7 +49,7 @@ const App = () => (
       />
       <Avatar name='Tomi Budi' size='lg' defaultBackground='cyanLightest' defaultColor='gray70' />
     </View>
-    <AvatarGroup
+    <AvatarsGroup
       size='md'
       maxLength={3}
       avatars={[
