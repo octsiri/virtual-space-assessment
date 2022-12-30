@@ -1,17 +1,21 @@
 import * as React from 'react';
 import styled, {css} from 'styled-components';
-import {colors, ColorsType, Image, Text} from '../foundations';
+import {colors, ColorsType, Image, Text, View} from '../foundations';
 import {avatarSizeMapper, type AvatarSizeTypes, getInitialCapitalName} from '../utils';
 
 interface Props {
+  hidden?: boolean;
   src?: string;
   name?: string;
   size: AvatarSizeTypes;
+  noTrim?: boolean;
   bordered?: boolean;
   withPadding?: boolean;
   defaultColor?: ColorsType;
   borderColor?: ColorsType;
-  defaultBackground: ColorsType;
+  defaultBackground?: ColorsType;
+  style?: React.CSSProperties;
+  onClick?: () => void;
 }
 
 interface AvatarImageContainerProps {
@@ -54,18 +58,25 @@ const AvatarImageContainer = styled.div<AvatarImageContainerProps>`
   background: ${(props) => (props.defaultBackground ? props.defaultBackground : colors.smokeLight)};
   color: ${(props) => (props.color ? props.color : colors.gray60)};
   border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
 `;
 
 const Avatar = (props: Props) => {
   const {
+    hidden,
     src,
     name,
     size,
+    noTrim,
     bordered,
     borderColor = 'white',
     defaultColor = 'cyanDarkest',
     defaultBackground = 'blueLightest',
-    ...otherProps
+    onClick,
+    style,
   } = props;
   const background = colors[defaultBackground];
   const color = colors[defaultColor];
@@ -74,37 +85,43 @@ const Avatar = (props: Props) => {
     if (src && src.length) {
       return (
         <Image
-          background={
-            'url("https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg")'
-          }
+          background={`url(${src})`}
           width={`${avatarSizeMapper[size].size}px`}
           objectFit='cover'
         />
       );
     }
     return (
-      <Text size={size} color={defaultColor}>
-        {getInitialCapitalName(name)}
-      </Text>
+      <View flexDirection='row' flexAlignItems='center' flexJustifyContent='center'>
+        {noTrim ? (
+          <Text size={size} color={defaultColor} textAlign='justify' style={{marginTop: -3}}>
+            +
+          </Text>
+        ) : (
+          <div />
+        )}
+        <Text size={size} color={defaultColor} textAlign='justify'>
+          {noTrim ? name : getInitialCapitalName(name, 2)}
+        </Text>
+      </View>
     );
-  }, [src, name, size]);
+  }, [src, name, size, noTrim]);
 
-  return (
+  return !hidden ? (
     <AvatarWrapper
       bordered={bordered}
       size={size}
       defaultBackground={defaultBackground}
       borderColor={borderColor}
+      style={style}
+      onClick={onClick}
     >
-      <AvatarImageContainer
-        defaultBackground={background}
-        color={color}
-        size={size}
-        {...otherProps}
-      >
+      <AvatarImageContainer defaultBackground={background} color={color} size={size}>
         {avatar}
       </AvatarImageContainer>
     </AvatarWrapper>
+  ) : (
+    <div />
   );
 };
 
