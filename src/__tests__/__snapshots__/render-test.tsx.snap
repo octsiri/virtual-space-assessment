@@ -249,4 +249,28 @@ exports[`Snapshot AvatarsGroup Component Render avatars group with custom props 
 </div>
 `;
 
-exports[`Snapshot AvatarsGroup Component Render avatars group with default props correctly 1`] = `<div />`;
+exports[`Snapshot AvatarsGroup Component Render avatars group with default props correctly 1`] = `
+<div
+  className="sc-hLBbgP bgpjRe"
+  size="md"
+>
+  <div
+    className="sc-eDvSVe fclrjC"
+    color="#767676"
+    size="md"
+  >
+    <div
+      className="sc-dkrFOg cVibjD"
+    >
+      <div />
+      <span
+        className="sc-gswNZR dRPPka"
+        color="gray70"
+        size="md"
+      >
+        U
+      </span>
+    </div>
+  </div>
+</div>
+`;
