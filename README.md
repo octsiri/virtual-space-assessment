@@ -8,7 +8,7 @@ This project was bootstrapped with :
 Demo link:
 https://63aef6ba30e9b39b59f9c9ff-hozrowwwzw.chromatic.com/
 
-For project collaboration, please email me on: dominggus.octovianus@gmail.com
+For project collaboration, please email me at dominggus.octovianus@gmail.com
 
 ## Available Scripts
 
