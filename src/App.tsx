@@ -11,43 +11,58 @@ const App = () => (
     <View margin={'20px'} flexDirection='row'>
       <Avatar
         src='https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg'
-        name='Tomi Budi'
+        username='Tomi Budi'
         size='xs'
         defaultBackground='cyanLightest'
         defaultColor='gray70'
       />
-      <Avatar name='Tomi Budi' size='xs' defaultBackground='cyanLightest' defaultColor='gray70' />
+      <Avatar
+        username='Tomi Budi'
+        size='xs'
+        defaultBackground='cyanLightest'
+        defaultColor='gray70'
+      />
     </View>
     <View margin={'20px'} flexDirection='row'>
       <Avatar
         src='https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg'
-        name='Tomi Budi'
+        username='Tomi Budi'
         size='sm'
         defaultBackground='cyanLightest'
         defaultColor='gray70'
       />
-      <Avatar name='Tomi Budi' size='sm' />
+      <Avatar username='Tomi Budi' size='sm' />
     </View>
     <View margin={'20px'} flexDirection='row'>
       <Avatar
         src='https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg'
-        name='Tomi Budi'
+        username='Tomi Budi'
         size='md'
         defaultBackground='cyanLightest'
         defaultColor='gray70'
       />
-      <Avatar name='Tomi Budi' size='md' defaultBackground='cyanLightest' defaultColor='gray70' />
+      <Avatar
+        username='Tomi Budi'
+        size='md'
+        defaultBackground='cyanLightest'
+        defaultColor='gray70'
+      />
     </View>
     <View margin={'20px'} flexDirection='row'>
       <Avatar
         bordered
         src='https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg'
-        name='Tomi Budi'
+        username='Tomi Budi'
         size='lg'
         defaultBackground='cyanLightest'
         defaultColor='gray70'
       />
-      <Avatar name='Tomi Budi' size='lg' defaultBackground='cyanLightest' defaultColor='gray70' />
+      <Avatar
+        username='Tomi Budi'
+        size='lg'
+        defaultBackground='cyanLightest'
+        defaultColor='gray70'
+      />
     </View>
     <AvatarsGroup
       size='md'
@@ -55,32 +70,32 @@ const App = () => (
       avatars={[
         {
           id: '1',
-          name: 'Angel Suryadiningrat',
-          imgSrc:
+          username: 'Angel Suryadiningrat',
+          imageSource:
             'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
         },
         {
           id: '2',
-          name: 'Angel Suryadiningrat',
-          imgSrc:
+          username: 'Angel Suryadiningrat',
+          imageSource:
             'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
         },
         {
           id: '3',
-          name: 'Angel Suryadiningrat',
-          imgSrc:
+          username: 'Angel Suryadiningrat',
+          imageSource:
             'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
         },
         {
           id: '4',
-          name: 'Angel Suryadiningrat',
-          imgSrc:
+          username: 'Angel Suryadiningrat',
+          imageSource:
             'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
         },
         {
           id: '5',
-          name: 'Angel Suryadiningrat',
-          imgSrc:
+          username: 'Angel Suryadiningrat',
+          imageSource:
             'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
         },
       ]}
