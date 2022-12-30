@@ -7,10 +7,9 @@ export interface Props {
   hidden?: boolean;
   src?: string;
   username?: string;
-  size: AvatarSizeTypes;
+  size?: AvatarSizeTypes;
   noTrim?: boolean;
   bordered?: boolean;
-  withPadding?: boolean;
   defaultColor?: ColorsType;
   borderColor?: ColorsType;
   defaultBackground?: ColorsType;
@@ -20,7 +19,6 @@ export interface Props {
 
 export interface AvatarImageContainerProps {
   name?: string;
-  withPadding?: boolean;
   size?: AvatarSizeTypes;
   src?: string;
   alt?: string;

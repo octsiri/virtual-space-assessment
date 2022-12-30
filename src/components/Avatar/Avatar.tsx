@@ -16,11 +16,11 @@ const AvatarWrapper = styled.div<Props>`
       ? css`
           border-color: ${props.borderColor ? colors[props.borderColor] : 'white'};
           border-style: solid;
-          border-width: ${avatarSizeMapper[props.size].borderWidth}px;
+          border-width: ${avatarSizeMapper[props.size || 'md'].borderWidth}px;
         `
       : ''};
-  width: ${(props) => avatarSizeMapper[props.size].size}px;
-  height: ${(props) => avatarSizeMapper[props.size].size}px;
+  width: ${(props) => avatarSizeMapper[props.size || 'md'].size}px;
+  height: ${(props) => avatarSizeMapper[props.size || 'md'].size}px;
   background-color: ${(props) =>
     props.defaultBackground ? colors[props.defaultBackground] : colors.gray70};
   position: relative;
@@ -48,9 +48,9 @@ const Avatar = (props: Props) => {
     hidden,
     src,
     username,
-    size,
     noTrim,
     bordered,
+    size = 'md',
     borderColor = 'gray20',
     defaultColor = 'gray70',
     defaultBackground = 'cyanLightest',
@@ -60,10 +60,27 @@ const Avatar = (props: Props) => {
   const background = colors[defaultBackground];
   const color = colors[defaultColor];
 
+  // NOTE: This is for adjust the text size for number more than a digit
+  const customSize = React.useMemo(() => {
+    if (noTrim && username && username.length > 1) {
+      switch (size) {
+        case 'xs':
+        case 'sm':
+          return 'xs';
+        case 'md':
+          return 'sm';
+        default:
+          return 'md';
+      }
+    }
+    return size;
+  }, [size, noTrim, username]);
+
   const avatar = React.useMemo(() => {
     if (src && src.length) {
       return (
         <Image
+          alt='avatar-image'
           background={`url(${src})`}
           width={`${avatarSizeMapper[size].size}px`}
           objectFit='cover'
@@ -73,13 +90,13 @@ const Avatar = (props: Props) => {
     return (
       <View flexDirection='row' flexAlignItems='center' flexJustifyContent='center'>
         {noTrim ? (
-          <Text size={size} color={defaultColor} textAlign='justify' style={{marginTop: -3}}>
+          <Text size={customSize} color={defaultColor} textAlign='justify' style={{marginTop: -3}}>
             +
           </Text>
         ) : (
           <div />
         )}
-        <Text size={size} color={defaultColor} textAlign='justify'>
+        <Text size={customSize} color={defaultColor} textAlign='justify'>
           {noTrim ? username : getInitialCapitalName(username, 2)}
         </Text>
       </View>

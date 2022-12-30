@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Avatar Component Render avatar with custom props correctly 1`] = `
+<div
+  className="sc-hLBbgP bgpjRe"
+  onClick={[Function]}
+  size="md"
+>
+  <div
+    className="sc-eDvSVe bFTEKl"
+    color="#767676"
+    size="md"
+  >
+    <div
+      alt="avatar-image"
+      className="sc-bcXHqe gLpgRM"
+      height="100%"
+      style={
+        Object {
+          "background": "url(https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg) center center / cover repeat",
+        }
+      }
+      width="48px"
+    />
+  </div>
+</div>
+`;
+
+exports[`Snapshot Avatar Component Render avatar with default props correctly 1`] = `
+<div
+  className="sc-hLBbgP bgpjRe"
+  size="md"
+>
+  <div
+    className="sc-eDvSVe fclrjC"
+    color="#767676"
+    size="md"
+  >
+    <div
+      className="sc-dkrFOg cVibjD"
+    >
+      <div />
+      <span
+        className="sc-gswNZR dRPPka"
+        color="gray70"
+        size="md"
+      >
+        U
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Avatar Component Render avatar with hidden props true correctly 1`] = `<div />`;
+
+exports[`Snapshot Avatar Component Render avatar with initial username only correctly 1`] = `
+<div
+  className="sc-hLBbgP bgpjRe"
+  onClick={[Function]}
+  size="md"
+>
+  <div
+    className="sc-eDvSVe bFTEKl"
+    color="#767676"
+    size="md"
+  >
+    <div
+      className="sc-dkrFOg cVibjD"
+    >
+      <div />
+      <span
+        className="sc-gswNZR dRPPka"
+        color="gray70"
+        size="md"
+      >
+        TS
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Avatar Component Render avatar with people remains counts and border props correctly 1`] = `
+<div
+  className="sc-hLBbgP cSAVTH"
+  size="md"
+>
+  <div
+    className="sc-eDvSVe viaQW"
+    color="#04A4A4"
+    size="md"
+  >
+    <div
+      className="sc-dkrFOg cVibjD"
+    >
+      <span
+        className="sc-gswNZR cZNUXP"
+        color="cyan"
+        size="md"
+        style={
+          Object {
+            "marginTop": -3,
+          }
+        }
+      >
+        +
+      </span>
+      <span
+        className="sc-gswNZR cZNUXP"
+        color="cyan"
+        size="md"
+      >
+        7
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot AvatarsGroup Component Render avatars group with custom props correctly 1`] = `
+<div
+  className="sc-jSUZER bFvggE"
+>
+  <div
+    className="sc-hLBbgP cWohFM"
+    size="lg"
+    style={
+      Object {
+        "marginLeft": -14,
+      }
+    }
+  >
+    <div
+      className="sc-eDvSVe fclrjC"
+      color="#767676"
+      size="lg"
+    >
+      <div
+        alt="avatar-image"
+        className="sc-bcXHqe iRhMtq"
+        height="100%"
+        style={
+          Object {
+            "background": "url(https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg) center center / cover repeat",
+          }
+        }
+        width="64px"
+      />
+    </div>
+  </div>
+  <div
+    className="sc-hLBbgP cWohFM"
+    size="lg"
+    style={
+      Object {
+        "marginLeft": -14,
+      }
+    }
+  >
+    <div
+      className="sc-eDvSVe fclrjC"
+      color="#767676"
+      size="lg"
+    >
+      <div
+        className="sc-dkrFOg cVibjD"
+      >
+        <div />
+        <span
+          className="sc-gswNZR BFEHI"
+          color="gray70"
+          size="lg"
+        >
+          TB
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-hLBbgP cWohFM"
+    size="lg"
+    style={
+      Object {
+        "marginLeft": -14,
+      }
+    }
+  >
+    <div
+      className="sc-eDvSVe fclrjC"
+      color="#767676"
+      size="lg"
+    >
+      <div
+        alt="avatar-image"
+        className="sc-bcXHqe iRhMtq"
+        height="100%"
+        style={
+          Object {
+            "background": "url(https://st.depositphotos.com/1694341/1303/i/600/depositphotos_13037294-stock-photo-angelina-jolie.jpg) center center / cover repeat",
+          }
+        }
+        width="64px"
+      />
+    </div>
+  </div>
+  <div />
+  <div />
+  <div />
+  <div
+    className="sc-hLBbgP cWohFM"
+    size="lg"
+    style={
+      Object {
+        "marginLeft": -14,
+      }
+    }
+  >
+    <div
+      className="sc-eDvSVe fclrjC"
+      color="#767676"
+      size="lg"
+    >
+      <div
+        className="sc-dkrFOg cVibjD"
+      >
+        <span
+          className="sc-gswNZR BFEHI"
+          color="gray70"
+          size="lg"
+          style={
+            Object {
+              "marginTop": -3,
+            }
+          }
+        >
+          +
+        </span>
+        <span
+          className="sc-gswNZR BFEHI"
+          color="gray70"
+          size="lg"
+        >
+          3
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot AvatarsGroup Component Render avatars group with default props correctly 1`] = `<div />`;

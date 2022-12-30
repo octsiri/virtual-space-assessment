@@ -1,13 +1,12 @@
-const getInitialCapitalName = (name?: string, length = 1) => {
-  const capitalName =
-    name === undefined
-      ? 'U'
-      : name
-          .trim()
-          .split(' ')
-          .map((name) => name[0].toUpperCase())
-          .join('')
-          .slice(0, length);
+const getInitialCapitalName = (username?: string, length = 1) => {
+  const capitalName = !username
+    ? 'U'
+    : username
+        .trim()
+        .split(' ')
+        .map((username) => username[0].toUpperCase())
+        .join('')
+        .slice(0, length);
   return capitalName;
 };
 

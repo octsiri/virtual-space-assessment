@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {View, Text} from './foundations';
 import {Avatar, AvatarsGroup} from './components/Avatar';
+import {TEMP_USER_LIST} from './stories/AvatarsGroup.stories';
 
 const App = () => (
   <View padding={20} height='100vh' width={'100vw'} flexAlignItems='center' flexDirection='column'>
@@ -64,42 +65,7 @@ const App = () => (
         defaultColor='gray70'
       />
     </View>
-    <AvatarsGroup
-      size='md'
-      maxLength={3}
-      avatars={[
-        {
-          id: '1',
-          username: 'Angel Suryadiningrat',
-          imageSource:
-            'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
-        },
-        {
-          id: '2',
-          username: 'Angel Suryadiningrat',
-          imageSource:
-            'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
-        },
-        {
-          id: '3',
-          username: 'Angel Suryadiningrat',
-          imageSource:
-            'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
-        },
-        {
-          id: '4',
-          username: 'Angel Suryadiningrat',
-          imageSource:
-            'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
-        },
-        {
-          id: '5',
-          username: 'Angel Suryadiningrat',
-          imageSource:
-            'https://t4.ftcdn.net/jpg/03/64/21/11/240_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
-        },
-      ]}
-    />
+    <AvatarsGroup size='md' maxLength={3} avatars={TEMP_USER_LIST} />
   </View>
 );
 

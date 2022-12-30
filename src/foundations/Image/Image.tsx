@@ -27,7 +27,7 @@ const Image = (props: Props): JSX.Element => {
   );
 
   return (
-    <ImageWrapper {...props} alt={props.alt} style={style}>
+    <ImageWrapper {...props} alt={props.alt || 'image-src'} style={style}>
       {props.children}
     </ImageWrapper>
   );

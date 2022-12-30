@@ -12,7 +12,7 @@ interface AvatarDataType {
 interface Props {
   avatars?: AvatarDataType[];
   maxLength?: number;
-  size: AvatarSizeTypes;
+  size?: AvatarSizeTypes;
 }
 
 const Wrapper = styled.div`
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 `;
 
 const AvatarsGroup = (props: Props) => {
-  const {avatars, maxLength = 1, size} = props;
+  const {avatars = [], maxLength = 1, size = 'md'} = props;
   const avatarRemains = avatars ? avatars.length - maxLength : -1;
 
   const avatarGroupContents = React.useMemo(() => {
