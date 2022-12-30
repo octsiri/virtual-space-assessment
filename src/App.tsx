@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {View, Text} from './foundations';
 import {Avatar, AvatarsGroup} from './components/Avatar';
-import {TEMP_USER_LIST} from './stories/AvatarsGroup.stories';
+import {getAvatarList} from './utils/getAvatarList';
 
 const App = () => (
   <View padding={20} height='100vh' width={'100vw'} flexAlignItems='center' flexDirection='column'>
@@ -65,7 +65,7 @@ const App = () => (
         defaultColor='gray70'
       />
     </View>
-    <AvatarsGroup size='md' maxLength={3} avatars={TEMP_USER_LIST} />
+    <AvatarsGroup size='md' maxLength={3} avatars={getAvatarList()} />
   </View>
 );
 

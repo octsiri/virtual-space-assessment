@@ -60,7 +60,7 @@ const AvatarsGroup = (props: Props) => {
       </Wrapper>
     );
   }
-  return <div />;
+  return <Avatar />;
 };
 
 export default React.memo<Props>(AvatarsGroup);
